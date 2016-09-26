@@ -1,0 +1,50 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    {% include head.html %}
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        {% include header.html %}
+        <div class="container" style="background-image: url({{page.header_image}});">
+          <div class="row">
+            <div class="product-container col-xs-12">
+              <h1>
+                <small>{{page.title_small}}</small><br/>
+                {{page.title}}
+              </h1>
+              <table id="coberturas">
+                <thead>
+                  <tr class="cobertura_titles">
+                    <th></th>
+                    {% for cobertura in page.coberturas %}
+                      <th>{{cobertura.title}}</th>
+                    {% endfor %}
+                  </tr>
+                  <tr class="cobertura_precios">
+                    <th>Escoge la cobertura apropiada para tí</th>
+                    {% for cobertura in page.coberturas %}
+                      <th>
+                        Cobertura por:
+                        <span class="cobertura_monto">{{page.moneda}}{{cobertura.cobertura}}</span>
+                        Por tan sólo <strong>{{page.moneda}}{{cobertura.cuota}}</strong> por {{page.periodo}}
+                      </th>
+                    {% endfor %}
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
+    </body>
+</html>

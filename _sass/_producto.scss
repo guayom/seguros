@@ -1,0 +1,56 @@
+.product-container{
+  h1, h1 small{
+    color: $azul;
+    text-transform: uppercase;
+  }
+}
+#coberturas{
+  width: 100%;
+
+  th, td{
+    text-align: center;
+  }
+  .cobertura_titles{
+    th{
+      color: #fff;
+      padding: 10px 0;
+      font-size: 1.1em;
+    }
+    th:nth-child(2){
+      background: darken($turquesa, 10%);
+    }
+    th:nth-child(3){
+      background: darken($celeste, 10%);
+    }
+    th:nth-child(4){
+      background: darken($azul, 10%);
+    }
+  }
+  .cobertura_precios{
+    th{
+      color: #fff;
+      padding: 20px 0;
+      font-weight: 400;
+    }
+    th:nth-child(1){
+      color: $azul;
+      font-size: 1.5em;
+    }
+    th:nth-child(2){
+      background: $turquesa;
+    }
+    th:nth-child(3){
+      background: $celeste;
+    }
+    th:nth-child(4){
+      background: $azul;
+    }
+  }
+  .cobertura_monto{
+    font-size: 2.6em;
+    clear: both;
+    display: block;
+    font-weight: 700;
+  }
+
+}

@@ -1,0 +1,42 @@
+* {
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
+
+//Bootstrap
+.navbar-default{
+  background-color: $gris-oscuro;
+  border: 0;
+  margin-bottom: 0;
+  .navbar-nav{
+    li{
+      a{
+        color: $gris-claro;
+        padding: 6px 30px;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        border-right: 1px solid #fff;
+        cursor: pointer;
+        &:hover{
+          background:#fff;
+          color: $rojo;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+.navbar{
+  min-height: 30px;
+}
+.navbar-collapse{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+//Kentico
+.logos{
+  margin-bottom: 20px;
+}
+
+//Mío
