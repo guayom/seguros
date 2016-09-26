@@ -1,128 +1,134 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    {% include head.html %}
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        {% include header.html %}
-        <div class="container" id="product-background" style="background-image: url({{page.header_image}});">
-          <div class="row">
-            <div class="product-container col-xs-12">
-              <h1>
-                <small>{{page.title_small}}</small><br/>
-                {{page.title}}
-              </h1>
-              <table id="coberturas">
-                <thead>
-                  <tr class="cobertura_titles">
-                    <th></th>
-                    {% for cobertura in page.coberturas %}
-                      <th>{{cobertura.title}}</th>
-                    {% endfor %}
-                  </tr>
-                  <tr class="cobertura_precios">
-                    <th>Escoge la cobertura apropiada para tí</th>
-                    {% for cobertura in page.coberturas %}
-                      <th>
-                        Cobertura por:
-                        <span class="cobertura_monto">{{page.moneda}}{{cobertura.cobertura}}</span>
-                        Por tan sólo <strong>{{page.moneda}}{{cobertura.cuota}}</strong> por {{page.periodo}}
-                      </th>
-                    {% endfor %}
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for categoria in page.cobertura_items %}
-                    <tr class="coberturas_categoria">
-                      <td>{{categoria.categoria}}</td>
-                      <td colspan="3"></td>
-                    </tr>
+---
+layout: default
+---
+{% include header.html %}
+<div class="container" id="product-background" style="background-image: url({{page.header_image}});">
+  <div class="row">
+    <div class="product-container col-xs-12">
+      <h1>
+        <small>{{page.title_small}}</small><br/>
+        {{page.title}}
+      </h1>
+      <table id="coberturas">
+        <thead>
+          <tr class="cobertura_titles">
+            <th width="40%"></th>
+            {% for cobertura in page.coberturas %}
+              <th width="20%">{{cobertura.title}}</th>
+            {% endfor %}
+          </tr>
+          <tr class="cobertura_precios">
+            <th>Escoge la cobertura apropiada para tí</th>
+            {% for cobertura in page.coberturas %}
+              <th>
+                Cobertura por:
+                <span class="cobertura_monto">{{page.moneda}}{{cobertura.cobertura}}</span>
+                Por tan sólo <strong>{{page.moneda}}{{cobertura.cuota}}</strong> por {{page.periodo}}
+              </th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for categoria in page.cobertura_items %}
+            <tr class="coberturas_categoria">
+              <td>{{categoria.categoria}}</td>
+              <td colspan="3"></td>
+            </tr>
 
-                    {% for item in categoria.items %}
-                    <tr class="categoria_items">
-                      <td>{{item.title}}</td>
-                      <td>{{item.valor_a}}</td>
-                      <td>{{item.valor_b}}</td>
-                      <td>{{item.valor_c}}</td>
-                    </tr>
-                    {% endfor %}
+            {% for item in categoria.items %}
+            <tr class="categoria_items">
+              <td>{{item.title}}</td>
+              <td>{{item.valor_a}}</td>
+              <td>{{item.valor_b}}</td>
+              <td>{{item.valor_c}}</td>
+            </tr>
+            {% endfor %}
 
-                  {% endfor %}
-                  <tr class="product_botones">
-                    <td>¡Obtenga su cobertura <strong>INMEDIATA!</strong><br/>Es FÁCIL y RÁPIDO</td>
-                    {% for cobertura in page.coberturas %}
-                      <td>
-                        <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-danger">
-                          Asegurarme
-                        </a>
-                      </td>
-                    {% endfor %}
-                </tbody>
-              </table>
+          {% endfor %}
+          <tr class="product_botones">
+            <td>¡Obtenga su cobertura <strong>INMEDIATA!</strong><br/>Es FÁCIL y RÁPIDO</td>
+            {% for cobertura in page.coberturas %}
+              <td>
+                <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-danger">
+                  Asegurarme
+                </a>
+              </td>
+            {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="product-tarjetas">
+  <div class="row">
+    <div class="col-xs-12">
+      Aceptamos las tarjetas más populares <img src="/images/tarjetas.png" width="240"/>
+    </div>
+  </div>
+</div>
+
+{% if page.requisitos %}
+<div class="container" id="product-requisitos">
+  <div class="row">
+    <div class="col-lg-3">
+      <h2>Requisitos</h2>
+      <p>El solicitante debe ser: </p>
+    </div>
+    <div class="col-lg-9">
+      <ul>
+        {% for requisito in page.requisitos %}
+          <li>{{requisito}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if page.reclamos %}
+<div class="container" id="product-reclamos">
+  <div class="row">
+    <div class="col-lg-3">
+      <h2>Reclamos</h2>
+    </div>
+    <div class="col-lg-9">
+      <ul>
+        {% for reclamo in page.reclamos %}
+          <li>{{reclamo}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if page.faq %}
+<div class="container" id="product-faq">
+  <div class="row">
+    <div class="col-lg-3">
+      <h2>Preguntas Frecuentes</h2>
+      <p> Haga click en las preguntas para ver sus respuestas</p>
+    </div>
+    <div class="col-lg-9">
+      <div class="panel-group" id="accordion">
+        <!-- <div class="faqHeader">General questions</div> -->
+        {% for pregunta in page.faq %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{forloop.index}}">{{pregunta.pregunta}}</a>
+                </h4>
             </div>
-          </div>
+            <div id="collapse{{forloop.index}}" class="panel-collapse collapse">
+                <div class="panel-body">
+                    {{pregunta.respuesta}}
+                </div>
+            </div>
         </div>
-
-        <div class="container" id="product-tarjetas">
-          <div class="row">
-            <div class="col-xs-12">
-              Aceptamos las tarjetas más populares <img src="/images/tarjetas.png" width="240"/>
-            </div>
-          </div>
-        </div>
-
-        <div class="container" id="product-requisitos">
-          <div class="row">
-            <div class="col-lg-3">
-              <h2>Requisitos</h2>
-              <p>El solicitante debe ser: </p>
-            </div>
-            <div class="col-lg-9">
-              <ul>
-                <li>Requisito número 1</li>
-                <li>Requisito número 2</li>
-                <li>Requisito número 3</li>
-                <li>Requisito número 4</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="container" id="product-reclamos">
-          <div class="row">
-            <div class="col-lg-3">
-              <h2>Reclamos</h2>
-            </div>
-            <div class="col-lg-9">
-              <ul>
-                <li>Requisito número 1</li>
-                <li>Requisito número 2</li>
-                <li>Requisito número 3</li>
-                <li>Requisito número 4</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="container" id="product-faq">
-          <div class="row">
-            <div class="col-lg-3">
-              <h2>Preguntas Frecuentes</h2>
-            </div>
-            <div class="col-lg-9">
-              <ul>
-                <li>Requisito número 1</li>
-                <li>Requisito número 2</li>
-                <li>Requisito número 3</li>
-                <li>Requisito número 4</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/>
-    </body>
-</html>
+        {% endfor %}
+    </div>
+    </div>
+  </div>
+</div>
+{% endif %}

@@ -1,54 +1,11 @@
 ---
-layout: product
-title: Accidentes personales
-title_small: Seguro de
-header_image: /images/accidentes-personales.png
-
-#periodo de cobro
-periodo: mes
-moneda: $
-
-#inicio del url al form
-form_root: /forms/
-coberturas:
-  -
-    title: Plan A
-    cobertura: 40800
-    cuota: 9.40
-    link_al_form: link_a
-  -
-    title: Plan B
-    cobertura: 60000
-    cuota: 13.75
-    link_al_form: link_b
-  -
-    title: Plan C
-    cobertura: 81600
-    cuota: 18.75
-    link_al_form: link_c
-
-cobertura_items:
-  -
-    categoria: Coberturas
-    items:
-      -
-        title: Muerte Accidental
-        valor_a: $12.000
-        valor_b: $18.000
-        valor_c: $24.000
-      -
-        title: Rentas Alimenticias durante 48 meses
-        valor_a: $600
-        valor_b: $875
-        valor_c: $1.200
-      -
-        title: Orientación Médica Telefónica
-        valor_a: Indefinido
-        valor_b: Indefinido
-        valor_c: Indefinido
-      -
-        title: Ambulancia Terrestre para Emergencia
-        valor_a: 2 Eventos por Año
-        valor_b: 2 Eventos por Año
-        valor_c: 2 Eventos por Año
+layout: default
+index: true
 ---
+<ul>
+{% for page in site.pages %}
+  {% unless page.index == true %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+  {% endunless %}
+{% endfor %}
+</ul>
