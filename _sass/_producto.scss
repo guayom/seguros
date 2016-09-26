@@ -3,6 +3,14 @@
     color: $azul;
     text-transform: uppercase;
   }
+  h1{
+    margin-bottom: 80px;
+  }
+}
+#product-background{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 40px;
 }
 #coberturas{
   width: 100%;
@@ -35,6 +43,7 @@
     th:nth-child(1){
       color: $azul;
       font-size: 1.5em;
+      background: #fff;
     }
     th:nth-child(2){
       background: $turquesa;
@@ -52,5 +61,79 @@
     display: block;
     font-weight: 700;
   }
+  .categoria_items{
+    td:nth-child(1){
+      color: $gris-oscuro;
+      text-align: left;
+      padding: 8px 10px;
+    }
+    td:nth-child(2), td:nth-child(4){
+      background: $gris-claro;
+    }
+  }
+  .product_botones{
+    border-top: 1px solid $gris-oscuro;
+    td:nth-child(1){
+      font-size: 1.5em;
+      color: $gris-oscuro;
+      strong{
+        color: $azul;
+      }
+    }
+    td{
+      padding: 20px 0;
+    }
+    .btn-danger{
+      background: $rojo;
+      font-size: 1.2em;
+      &:hover{
+        background: darken($rojo, 10%);
+      }
+    }
+  }
+  tbody{
+    background-color: #fff;
+    td{
+      padding: 15px 0;
+      color: $gris-oscuro;
+    }
+    tr.categoria_items:hover{
+      td, td:nth-child(2), td:nth-child(4){
+        background: darken($gris-claro, 5%);
+        cursor: pointer;
+      }
+    }
+  }
+  .coberturas_categoria{
+    background: darken($azul, 20%);
+    td{
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
 
+#product-tarjetas{
+  background: $gris-claro;
+  padding:  40px 20px;
+  font-size: 1.5em;
+  color: $gris-oscuro;
+  text-align: center;
+}
+
+#product-requisitos{
+  background: $azul;
+  color: #fff;
+  padding:  40px 20px;
+}
+
+#product-reclamos, #product-faq{
+  padding:  40px 20px;
+  color: $gris-oscuro;
+  h2{
+    color: $azul;
+  }
+}
+#product-reclamos{
+  border-bottom: 1px solid lighten($gris-oscuro, 40%);
 }

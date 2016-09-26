@@ -9,7 +9,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         {% include header.html %}
-        <div class="container" style="background-image: url({{page.header_image}});">
+        <div class="container" id="product-background" style="background-image: url({{page.header_image}});">
           <div class="row">
             <div class="product-container col-xs-12">
               <h1>
@@ -36,11 +36,89 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td></td>
-                  </tr>
+                  {% for categoria in page.cobertura_items %}
+                    <tr class="coberturas_categoria">
+                      <td>{{categoria.categoria}}</td>
+                      <td colspan="3"></td>
+                    </tr>
+
+                    {% for item in categoria.items %}
+                    <tr class="categoria_items">
+                      <td>{{item.title}}</td>
+                      <td>{{item.valor_a}}</td>
+                      <td>{{item.valor_b}}</td>
+                      <td>{{item.valor_c}}</td>
+                    </tr>
+                    {% endfor %}
+
+                  {% endfor %}
+                  <tr class="product_botones">
+                    <td>¡Obtenga su cobertura <strong>INMEDIATA!</strong><br/>Es FÁCIL y RÁPIDO</td>
+                    {% for cobertura in page.coberturas %}
+                      <td>
+                        <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-danger">
+                          Asegurarme
+                        </a>
+                      </td>
+                    {% endfor %}
                 </tbody>
               </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" id="product-tarjetas">
+          <div class="row">
+            <div class="col-xs-12">
+              Aceptamos las tarjetas más populares <img src="/images/tarjetas.png" width="240"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" id="product-requisitos">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2>Requisitos</h2>
+              <p>El solicitante debe ser: </p>
+            </div>
+            <div class="col-lg-9">
+              <ul>
+                <li>Requisito número 1</li>
+                <li>Requisito número 2</li>
+                <li>Requisito número 3</li>
+                <li>Requisito número 4</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" id="product-reclamos">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2>Reclamos</h2>
+            </div>
+            <div class="col-lg-9">
+              <ul>
+                <li>Requisito número 1</li>
+                <li>Requisito número 2</li>
+                <li>Requisito número 3</li>
+                <li>Requisito número 4</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="product-faq">
+          <div class="row">
+            <div class="col-lg-3">
+              <h2>Preguntas Frecuentes</h2>
+            </div>
+            <div class="col-lg-9">
+              <ul>
+                <li>Requisito número 1</li>
+                <li>Requisito número 2</li>
+                <li>Requisito número 3</li>
+                <li>Requisito número 4</li>
+              </ul>
             </div>
           </div>
         </div>
