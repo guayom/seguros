@@ -167,6 +167,20 @@
 .precios-header{
   position: relative;
 
+  a{
+    color: #fff;
+    display: block;
+
+    &:hover{
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    &:hover > .cobertura_monto{
+      text-decoration: underline;
+    }
+  }
+
   &:hover:afterz{
     content: "";
     width: 100%;

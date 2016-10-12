@@ -21,10 +21,11 @@ layout: default
             <th>Escoge la cobertura apropiada para tí</th>
             {% for cobertura in page.coberturas %}
               <th class="precios-header">
-                <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-danger hover-btn">Asegurarme</a>
-                Cobertura por:
-                <span class="cobertura_monto">{{page.moneda}}{{cobertura.cobertura}}</span>
-                Por tan sólo <strong>{{page.moneda}}{{cobertura.cuota}}</strong>{% if page.periodo != "unico" %} por {{page.periodo}}{% endif %}
+                <a href="{{page.form_root}}{{cobertura.link_al_form}}">
+                  Cobertura por:
+                  <span class="cobertura_monto">{{page.moneda}}{{cobertura.cobertura}}</span>
+                  Por tan sólo <strong>{{page.moneda}}{{cobertura.cuota}}</strong>{% if page.periodo != "unico" %} por {{page.periodo}}{% endif %}
+                </a>
               </th>
             {% endfor %}
           </tr>
