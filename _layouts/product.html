@@ -62,6 +62,7 @@ layout: default
                 </a>
               </td>
             {% endfor %}
+          </tr>
         </tbody>
       </table>
     </div>
@@ -72,6 +73,14 @@ layout: default
   <div class="row">
     <div class="col-xs-12">
       Aceptamos las tarjetas más populares <img src="/images/tarjetas.png" width="240"/>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="numero_de_producto">
+  <div class="row">
+    <div class="col-xs-12">
+      {{ page.numero_de_producto }}
     </div>
   </div>
 </div>
@@ -87,23 +96,6 @@ layout: default
       <ul>
         {% for requisito in page.requisitos %}
           <li>{{requisito}}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</div>
-{% endif %}
-
-{% if page.reclamos %}
-<div class="container" id="product-reclamos">
-  <div class="row">
-    <div class="col-lg-3">
-      <h2>Reclamos</h2>
-    </div>
-    <div class="col-lg-9">
-      <ul>
-        {% for reclamo in page.reclamos %}
-          <li>{{reclamo}}</li>
         {% endfor %}
       </ul>
     </div>
@@ -136,6 +128,40 @@ layout: default
         </div>
         {% endfor %}
     </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if page.reclamos %}
+<div class="container" id="product-reclamos">
+  <div class="row">
+    <div class="col-lg-3">
+      <h2>Reclamos</h2>
+    </div>
+    <div class="col-lg-9">
+      <ul>
+        {% for reclamo in page.reclamos %}
+          <li>{{reclamo}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% if page.exclusiones %}
+<div class="container" id="product-exclusiones">
+  <div class="row">
+    <div class="col-lg-3">
+      <h2>Exclusiones</h2>
+    </div>
+    <div class="col-lg-9">
+      <ul>
+        {% for exclusion in page.exclusiones %}
+          <li>{{exclusion}}</li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
 </div>
