@@ -37,7 +37,7 @@
   .cobertura_precios{
     th{
       color: #fff;
-      padding: 20px 0;
+      //padding: 20px 0;
       font-weight: 400;
     }
     th:nth-child(1){
@@ -170,6 +170,7 @@
   a{
     color: #fff;
     display: block;
+    padding: 20px 0;
 
     &:hover{
       color: #fff;
