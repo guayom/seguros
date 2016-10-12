@@ -20,10 +20,11 @@ layout: default
           <tr class="cobertura_precios">
             <th>Escoge la cobertura apropiada para tí</th>
             {% for cobertura in page.coberturas %}
-              <th>
+              <th class="precios-header">
+                <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-danger hover-btn">Asegurarme</a>
                 Cobertura por:
                 <span class="cobertura_monto">{{page.moneda}}{{cobertura.cobertura}}</span>
-                Por tan sólo <strong>{{page.moneda}}{{cobertura.cuota}}</strong> por {{page.periodo}}
+                Por tan sólo <strong>{{page.moneda}}{{cobertura.cuota}}</strong>{% if page.periodo != "unico" %} por {{page.periodo}}{% endif %}
               </th>
             {% endfor %}
           </tr>
@@ -32,7 +33,13 @@ layout: default
           {% for categoria in page.cobertura_items %}
             <tr class="coberturas_categoria">
               <td>{{categoria.categoria}}</td>
-              <td colspan="3"></td>
+              {% for cobertura in page.coberturas %}
+                <td>
+                  <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-danger btn-small">
+                    Asegurarme
+                  </a>
+                </td>
+              {% endfor %}
             </tr>
 
             {% for item in categoria.items %}

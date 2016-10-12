@@ -110,6 +110,13 @@
       color: #fff;
       text-align: center;
     }
+    td:first-child{
+      font-size: 1.5em;
+    }
+    .btn-small{
+      font-size: 0.9em;
+      padding: 4px 8px;
+    }
   }
 }
 
@@ -155,4 +162,22 @@
   padding-top: 40px;
   padding-bottom: 40px;
   background: url(../images/header.png) no-repeat right top;
+}
+
+.precios-header{
+  position: relative;
+
+  &:hover:afterz{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: red;
+    display: block;
+    border: solid green 5px;
+  }
+
+  .hover-btn{
+    position: absolute;
+    display: none;
+  }
 }
