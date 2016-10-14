@@ -222,3 +222,10 @@
   padding: 2em 0;
   color: $gris-oscuro;
 }
+.dropdown-menu{
+    background: $gris-oscuro;
+}
+.navbar-default .navbar-nav .dropdown-menu li a
+{
+    border-right: none;
+}
