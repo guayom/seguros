@@ -6,12 +6,13 @@
   h1{
     margin-bottom: 80px;
     font-size: 36px;
+    text-align: center;
   }
 }
 #product-background{
   background-repeat: no-repeat;
   background-size: 100%;
-  padding: 40px 50px 0 50px;
+  padding: 10px;
 }
 #coberturas{
   width: 100%;
@@ -228,4 +229,32 @@
 .navbar-default .navbar-nav .dropdown-menu li a
 {
     border-right: none;
+}
+
+.responsive-plans{
+  div{
+    margin-bottom: 10px;
+  }
+  .cobertura_monto{
+    display: block;
+    font-size: 2em;
+  }
+  .precios-header{
+    text-align: center;
+    &:nth-child(2){
+      background: darken($turquesa, 10%);
+    }
+    &:nth-child(3){
+      background: darken($celeste, 10%);
+    }
+    &:nth-child(4){
+      background: darken($azul, 10%);
+    }
+  }
+  .btn{
+    font-size: 1.5em;
+  }
+}
+.tablesaw-swipe .tablesaw-cell-persist{
+  border: none;
 }

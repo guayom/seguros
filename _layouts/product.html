@@ -9,16 +9,19 @@ layout: default
         <small>{{page.title_small}}</small><br/>
         {{page.title}}
       </h1>
-      <table id="coberturas">
+      <table id="coberturas" class="tablesaw" data-tablesaw-mode="swipe" data-minimap>
+      <!-- <table id="coberturas"> -->
         <thead>
           <tr class="cobertura_titles">
-            <th width="40%"></th>
+            <th data-tablesaw-priority="persist" scope="col">&nbsp;</th>
             {% for cobertura in page.coberturas %}
-              <th width="20%">{{cobertura.title}}</th>
+              <th scope="col" class="coberturas-titulos">{{cobertura.title}}</th>
             {% endfor %}
           </tr>
+        </thead>
+        <tbody>
           <tr class="cobertura_precios">
-            <th>Escoge la cobertura apropiada para tí</th>
+            <th>Escogé la cobertura apropiada para tí</th>
             {% for cobertura in page.coberturas %}
               <th class="precios-header">
                 <a href="{{page.form_root}}{{cobertura.link_al_form}}">
@@ -29,17 +32,11 @@ layout: default
               </th>
             {% endfor %}
           </tr>
-        </thead>
-        <tbody>
           {% for categoria in page.cobertura_items %}
             <tr class="coberturas_categoria">
               <td>{{categoria.categoria}}</td>
               {% for cobertura in page.coberturas %}
-                <td>
-                  <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-danger btn-small">
-                    Asegurarme
-                  </a>
-                </td>
+                <td></td>
               {% endfor %}
             </tr>
 
