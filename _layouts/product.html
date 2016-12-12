@@ -21,13 +21,13 @@ layout: default
         </thead>
         <tbody>
           <tr class="cobertura_precios">
-            <th>Escogé la cobertura apropiada para tí</th>
+            <th>Escogé la cobertura apropiada para vos</th>
             {% for cobertura in page.coberturas %}
               <th class="precios-header">
                 <a href="{{page.form_root}}{{cobertura.link_al_form}}">
                   Cobertura por:
-                  <span class="cobertura_monto">{{page.moneda}}{{cobertura.cobertura}}</span>
-                  Por tan sólo <strong>{{page.moneda}}{{cobertura.cuota}}</strong>{% if page.periodo != "unico" %} por {{page.periodo}}{% endif %}
+                  <span class="cobertura_monto cobertura-{{forloop.index}}">{{page.moneda}}{{cobertura.cobertura}}</span>
+                  Desde <strong>{{page.moneda}}{{cobertura.cuota}}</strong>{% if page.periodo != "unico" %} por {{page.periodo}}{% endif %}
                 </a>
               </th>
             {% endfor %}
@@ -69,7 +69,7 @@ layout: default
 <div class="container" id="product-tarjetas">
   <div class="row">
     <div class="col-xs-12">
-      Aceptamos las tarjetas más populares <img src="https://www.credomatic.cr/BacCredomaticSeguros/getmedia/dd025f92-561f-421b-b57c-4ba49820e439/tarjetas.aspx" width="240"/>
+      Aceptamos las tarjetas más populares <img src="https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/product-pages/tarjetas.png" width="240"/>
     </div>
   </div>
 </div>
