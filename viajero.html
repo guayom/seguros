@@ -2,31 +2,35 @@
 layout: product
 title: Viajero
 title_small: Seguro
-header_image: https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/product-pages/viajero.jpg
+header_image: https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/product-pages/cr-viajero-hero.jpg
 
 numero_de_producto: Producto registrado en SUGESE Nº P19-57-A03-574 .MAPFRE Seguros Costa Rica S.A.
 
 #periodo de cobro
-periodo: unico
+periodo: días
 moneda: $
 
 #inicio del url al form
 form_root: /BacCredomaticSeguros/Products/Seguro-Viajero/Seguro-Viajero/
+
 coberturas:
   -
-    title: Cobertura A
+    title: Opción A
     cobertura: "50.000"
     cuota: 39.6
+    periodo: 5
     link_al_form: Cobertura-A-(1).aspx
   -
-    title: Cobertura B
+    title: Opción B
     cobertura: "100.000"
     cuota: 54.9
+    periodo: 5
     link_al_form: Cobertura-B-(1).aspx
   -
-    title: Cobertura C
+    title: Opción C
     cobertura: "200.000"
     cuota: 61.2
+    periodo: 5
     link_al_form: Cobertura-C-(1).aspx
 
 cobertura_items:
@@ -52,65 +56,72 @@ cobertura_items:
     categoria: Gastos Médicos
     items:
       -
-        title: Asistencia médica por accidente o enfermedad aguda o por emergencia médica
-        valor_a: $50.000
-        valor_b: $150.000
-        valor_c: $200.000
+        title: Eventos accidentales o enfermedades agudas o por emegencia médica
+        valor_a: <small>Hasta</small><br/>$50.000
+        valor_b: <small>Hasta</small><br/>$150.000
+        valor_c: <small>Hasta</small><br/>$200.000
       -
-        title: Gastos funerales, sublímite
+        title: Gastos Funerarios
         valor_a: $3.000
         valor_b: $3.000
         valor_c: $3.000
       -
         title: Repatriación sanitaria
-        valor_a: Incluído
-        valor_b: Incluído
-        valor_c: Incluído
+        valor_a: Hasta $5.000
+        valor_b: Hasta $15.000
+        valor_c: Hasta $20.000
       -
         title: Repatriación de restos mortales
-        valor_a: Incluído
-        valor_b: Incluído
-        valor_c: Incluído
+        valor_a: Hasta $5.000
+        valor_b: Hasta $15.000
+        valor_c: Hasta $20.000
       -
-        title: Traslado aéreo de un acompañante ida y vuelta
-        valor_a: Cubre Boleto
-        valor_b: Cubre Boleto
-        valor_c: Cubre Boleto
+        title: Traslado aéreo de un acompañante ida y vuelta (por recomendación médica)
+        valor_a: Hasta $5.000
+        valor_b: Hasta $15.000
+        valor_c: Hasta $20.000
+      -
+        title: 	Gastos de traslado aéreo del asegurado
+        valor_a: Hasta $5.000
+        valor_b: Hasta $15.000
+        valor_c: Hasta $20.000
       -
         title: Alojamiento, Pensión y Transporte para Acompañante
         valor_a: $100 diarios<br/>Máximo $1000
         valor_b: $100 diarios<br/>Máximo $1000
         valor_c: $100 diarios<br/>Máximo $1000
-      -
-        title: Renta diaria por hospitalización
-        valor_a: $25 diarios<br/>Máximo $850
-        valor_b: $25 diarios<br/>Máximo $850
-        valor_c: $25 diarios<br/>Máximo $850
-      -
-        title: Cancelación y acortamiento de viaje
-        valor_a: Hasta $5.000
-        valor_b: Hasta $5.000
-        valor_c: Hasta $5.000
-      -
-        title: Pérdida del pasaporte
-        valor_a: $100
-        valor_b: $100
-        valor_c: $100
-      -
-        title: Retraso del viaje
-        valor_a: $100
-        valor_b: $100
-        valor_c: $100
-      -
-        title: Pérdida del equipaje
-        valor_a: $250
-        valor_b: $500
-        valor_c: $1000
-      -
-        title: Pérdida temporal del equipaje
-        valor_a: $50
-        valor_b: $100
-        valor_c: $200
+  -
+    categoria: Renta diaria por hospitalización
+    valor_a: $25 diarios<br/>Máximo $850
+    valor_b: $25 diarios<br/>Máximo $850
+    valor_c: $25 diarios<br/>Máximo $850
+  -
+    categoria: Cancelación y acortamiento de viaje
+    valor_a: Hasta $5.000
+    valor_b: Hasta $5.000
+    valor_c: Hasta $5.000
+  -
+    categoria: Retraso del viaje
+    valor_a: $100
+    valor_b: $100
+    valor_c: $100
+  -
+    categoria: Pérdida definitiva de equipaje
+    valor_a: $250
+    valor_b: $500
+    valor_c: $1000
+  -
+    categoria: Pérdida temporal de equipaje
+    valor_a: $50
+    valor_b: $100
+    valor_c: $200
+  -
+    categoria: Pérdida del pasaporte
+    valor_a: $100
+    valor_b: $100
+    valor_c: $100
+
+
 
 requisitos:
   - Una persona física

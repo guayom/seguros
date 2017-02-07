@@ -25,9 +25,9 @@ layout: default
             {% for cobertura in page.coberturas %}
               <th class="precios-header">
                 <a href="{{page.form_root}}{{cobertura.link_al_form}}">
-                  Cobertura por:
-                  <span class="cobertura_monto cobertura-{{forloop.index}}">{{page.moneda}}{{cobertura.cobertura}}</span>
-                  {% if page.palabra %}{{page.palabra}}{% else %}Desde{%endif%} <strong>{{page.moneda}}{{cobertura.cuota}}</strong> por {{cobertura.periodo}} {{page.periodo}}
+                  Prima:
+                  <span class="cobertura_monto cobertura-{{forloop.index}}">{{page.moneda}}{{cobertura.cuota}}</span>
+                  Mensuales
                 </a>
               </th>
             {% endfor %}

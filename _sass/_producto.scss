@@ -43,9 +43,9 @@
       font-weight: 400;
     }
     th:nth-child(1){
-      color: $azul;
+      color: #fff;
       font-size: 1.5em;
-      background: #fff;
+      background: darken($azul, 10%);
     }
     th:nth-child(2){
       background: $turquesa;
@@ -67,6 +67,13 @@
       color: $gris-oscuro;
       text-align: left;
       padding: 8px 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      &.sub_items{
+        padding-left: 40px;
+        font-size: 1em;
+        font-weight: normal;
+      }
     }
     td:nth-child(2), td:nth-child(4){
       background: $gris-claro;
@@ -103,20 +110,6 @@
         background: darken($gris-claro, 5%);
         cursor: default;
       }
-    }
-  }
-  .coberturas_categoria{
-    background: darken($azul, 20%);
-    td{
-      color: #fff;
-      text-align: center;
-    }
-    td:first-child{
-      font-size: 1.5em;
-    }
-    .btn-small{
-      font-size: 0.9em;
-      padding: 4px 8px;
     }
   }
 }
