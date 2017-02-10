@@ -1,0 +1,23 @@
+#product-faq, #product-exclusiones{
+  padding:  40px 20px;
+  color: $gris-oscuro;
+  //border-bottom: 1px solid lighten($gris-oscuro, 40%);
+  h2{
+    color: $azul;
+    font-size: 30px;
+  }
+}
+#product-faq{
+  .panel{
+    border: 0;
+  }
+  .panel-heading{
+    background-color: #fff;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .panel-title{
+    font-size: 1em;
+    color: $gris-oscuro;
+  }
+}

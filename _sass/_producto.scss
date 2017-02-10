@@ -122,50 +122,6 @@
   text-align: center;
 }
 
-#product-requisitos{
-  background: $azul;
-  color: #fff;
-  padding:  40px 0;
-  h2{
-    font-size: 30px;
-  }
-  ul{
-    padding-left: 15px;
-  }
-}
-
-#product-faq, #product-exclusiones{
-  padding:  40px 20px;
-  color: $gris-oscuro;
-  //border-bottom: 1px solid lighten($gris-oscuro, 40%);
-  h2{
-    color: $azul;
-    font-size: 30px;
-  }
-}
-#product-reclamos{
-  padding:  40px 20px;
-  color: $gris-oscuro;
-  background: $gris-claro;
-  //border-bottom: 1px solid lighten($gris-oscuro, 40%);
-  h2{
-    color: $azul;
-    font-size: 30px;
-  }
-}
-#product-faq{
-  .panel{
-    border: 0;
-  }
-  .panel-heading{
-    background-color: #fff;
-  }
-  .panel-title{
-    font-size: 1em;
-    color: $gris-oscuro;
-  }
-}
-
 //Mio
 .row.logos{
   padding-top: 40px;
@@ -204,19 +160,6 @@
     position: absolute;
     display: none;
   }
-}
-.numero_de_producto{
-  //background-color: $gris-claro;
-  font-size: 0.8em;
-  font-color: $gris-oscuro;
-  text-align: right;
-}
-
-#numero_de_producto{
-  text-align: center;
-  font-size: 0.8em;
-  padding: 2em 0;
-  color: $gris-oscuro;
 }
 .dropdown-menu{
     background: $gris-oscuro;

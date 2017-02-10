@@ -5,8 +5,12 @@ index: true
 @charset "utf-8";
 @import "variables";
 @import "base";
-@import "tablesaw";
-@import "header";
-@import "producto";
-@import "responsive";
-@import "mobile_first";
+@import "partials-mobile-first/hero";
+@import "partials-mobile-first/tab-navigation";
+@import "partials-mobile-first/precios";
+@import "partials-mobile-first/table";
+@import "partials/tarjetas-mas-populares";
+@import "partials/numero-de-producto";
+@import "partials/requisitos";
+@import "partials/faq";
+@import "partials/reclamos";

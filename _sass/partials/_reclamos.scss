@@ -1,0 +1,10 @@
+#product-reclamos{
+  padding:  40px 20px;
+  color: $gris-oscuro;
+  background: $gris-claro;
+  //border-bottom: 1px solid lighten($gris-oscuro, 40%);
+  h2{
+    color: $azul;
+    font-size: 30px;
+  }
+}
