@@ -1,0 +1,12 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+index: true
+---
+@charset "utf-8";
+@import "variables";
+@import "base";
+@import "tablesaw";
+@import "header";
+@import "producto";
+@import "responsive";
+@import "mobile_first";

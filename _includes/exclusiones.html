@@ -1,0 +1,16 @@
+{% if page.exclusiones %}
+<div class="container" id="product-exclusiones">
+  <div class="row">
+    <div class="col-lg-3">
+      <h2>Exclusiones</h2>
+    </div>
+    <div class="col-lg-9">
+      <ul>
+        {% for exclusion in page.exclusiones %}
+          <li>{{exclusion}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endif %}

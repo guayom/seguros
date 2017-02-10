@@ -1,0 +1,29 @@
+{% if page.faq %}
+<div class="container" id="product-faq">
+  <div class="row">
+    <div class="col-lg-3">
+      <h2>Preguntas Frecuentes</h2>
+      <p> Haga click en las preguntas para ver sus respuestas</p>
+    </div>
+    <div class="col-lg-9">
+      <div class="panel-group" id="accordion">
+        <!-- <div class="faqHeader">General questions</div> -->
+        {% for pregunta in page.faq %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse{{forloop.index}}">{{pregunta.pregunta}}</a>
+                </h4>
+            </div>
+            <div id="collapse{{forloop.index}}" class="panel-collapse collapse">
+                <div class="panel-body">
+                    {{pregunta.respuesta}}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+  </div>
+</div>
+{% endif %}

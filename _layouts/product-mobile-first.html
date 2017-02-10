@@ -1,61 +1,69 @@
----
-layout: default
----
-<div class="hero-mobile-first hero-cobertura-a">
-  <h1>Seguro<br/>Viajero</h1>
-</div>
-<div class="container-fluid">
-  <div class="row tab-navigation">
-    <div class="col-xs-4 tab-cobertura-a">Cobertura A</div>
-    <div class="col-xs-4 tab-cobertura-b">Cobertura B</div>
-    <div class="col-xs-4 tab-cobertura-c">Cobertura C</div>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Seguros</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="{{ "/css/mobile-first.css" | prepend: site.baseurl }}">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <div class="hero-mobile-first hero-cobertura-a">
+    <h1>Seguro<br/>Viajero</h1>
   </div>
-</div>
-<div class="container precios">
-  <div class="row">
-    <div class="col-xs-6">
-      <div class="coberturas-precios">
-        <p>$39.6</p>
-        <p class="small"><small>Viaje de 5 días</small></p>
-      </div>
-    </div>
-    <div class="col-xs-6">
-      <div class"coberturas-precios">
-        <p class="cobertura-por"><small>Cobertura por</small>$50.000</p>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <a class="main-button" href="#">Asegurarme ahora</a>
+  <div class="container-fluid">
+    <div class="row tab-navigation">
+      <div class="col-xs-4 tab-cobertura-a active">Cobertura A</div>
+      <div class="col-xs-4 tab-cobertura-b">Cobertura B</div>
+      <div class="col-xs-4 tab-cobertura-c">Cobertura C</div>
     </div>
   </div>
-  <div>
-    <div class="col-xs-12">
-      <div class="table-coberturas">
-        <table class="table table-bordered">
-          {% for item in page.cobertura_items %}
-            <thead>
-              <tr>
-                <th>{{item.categoria}}</th>
-                <th>Cobertura A</th>
-                <th>Cobertura B</th>
-                <th>Cobertura C</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for sub_item in item.items %}
+  <div class="container precios">
+    {% include precio_cobertura.html %}
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1">
+        <div class="table-coberturas">
+          <table class="table">
+            {% for item in page.cobertura_items %}
+              <thead>
                 <tr>
-                  <td>{{sub_item.title}}</td>
-                  <td>{{sub_item.valor_a}}</td>
-                  <td>{{sub_item.valor_b}}</td>
-                  <td>{{sub_item.valor_c}}</td>
+                  <th>{{item.categoria}}</th>
+                  <th class="cell-cobertura-a">Cobertura A</th>
+                  <th class="cell-cobertura-b" style="display:none;">Cobertura B</th>
+                  <th class="cell-cobertura-b" style="display:none;">Cobertura C</th>
                 </tr>
-              {% endfor %}
-            </tbody>
-          {% endfor %}
-        </table>
+              </thead>
+              <tbody>
+                {% for sub_item in item.items %}
+                  <tr>
+                    <td>{{sub_item.title}}</td>
+                    <td class="cell-cobertura-a active">{{sub_item.valor_a}}</td>
+                    <td class="cell-cobertura-b" style="display:none">{{sub_item.valor_b}}</td>
+                    <td class="cell-cobertura-c" style="display:none">{{sub_item.valor_c}}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            {% endfor %}
+          </table>
+        </div>
       </div>
     </div>
+    {% include precio_cobertura.html %}
+    {% include tarjetas-mas-populares.html %}
+    {% include numero-de-producto.html %}
+    {% include requisitos.html %}
+    {% include faq.html %}
+    {% include reclamos.html %}
+    {% include exclusiones.html %}
   </div>
-</div>
+</body>
+</html>

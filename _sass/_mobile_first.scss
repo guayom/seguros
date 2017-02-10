@@ -76,19 +76,85 @@ body{
     color: #fff;
     padding: 12px 0;
     text-align: center;
+    position: relative;
   }
-}
-.tab-cobertura-a{
-  background: $turquesa;
-}
-.tab-cobertura-b{
-  background: $celeste;
-}
-.tab-cobertura-c{
-  background: $azul;
+  div.active:after{
+    position: absolute;
+    content: "";
+    top: 98%;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0px 15px;
+    border-color: #f00 transparent transparent transparent;
+  }
+  .tab-cobertura-a.active:after{
+    border-color: $turquesa transparent transparent transparent;
+  }
+  .tab-cobertura-b.active:after{
+    border-color: $celeste transparent transparent transparent;
+  }
+  .tab-cobertura-c.active:after{
+    border-color: $azul transparent transparent transparent;
+  }
+  .tab-cobertura-a{
+    background: $turquesa;
+  }
+  .tab-cobertura-b{
+    background: $celeste;
+  }
+  .tab-cobertura-c{
+    background: $azul;
+  }
 }
 .table-coberturas{
   table{
     max-width: 100%;
+    background: $gris-claro;
+    border-bottom: 1px $gris-medio solid;
+    tbody >tr>td{
+      border-top: 0;
+      padding: 4px 15px 5px 15px;
+      border-right: 1px solid $gris-medio;
+      &:first-child{
+        background: #fff;
+        border-left: 1px solid $gris-medio;
+        border-right: 0;
+      }
+      &.active{
+        &.cell-cobertura-a{
+          background: lighten($turquesa, 30%);
+        }
+        &.cell-cobertura-b{
+          background: lighten($celeste, 30%);
+        }
+        &.cell-cobertura-c{
+          background: lighten($azul, 40%);
+        }
+      }
+    }
+
+  }
+  th{
+    background: $gris-medio;
+    &.cell-cobertura-a{
+      background: $turquesa;
+      border-color: $turquesa;
+      border-right: 1px solid $turquesa;
+      color: #fff;
+    }
+    &.cell-cobertura-b{
+      background: $celeste;
+      border-color: $celeste;
+      border-right: 1px solid $celeste;
+      color: #fff;
+    }
+    &.cell-cobertura-c{
+      background: $azul;
+      border-color: $azul;
+      border-right: 1px solid $azul;
+      color: #fff;
+    }
   }
 }

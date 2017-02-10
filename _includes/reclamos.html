@@ -1,0 +1,16 @@
+{% if page.reclamos %}
+<div class="container" id="product-reclamos">
+  <div class="row">
+    <div class="col-lg-3">
+      <h2>Reclamos</h2>
+    </div>
+    <div class="col-lg-9">
+      <ul>
+        {% for reclamo in page.reclamos %}
+          <li>{{reclamo}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endif %}

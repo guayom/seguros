@@ -125,9 +125,12 @@
 #product-requisitos{
   background: $azul;
   color: #fff;
-  padding:  40px 20px;
+  padding:  40px 0;
   h2{
     font-size: 30px;
+  }
+  ul{
+    padding-left: 15px;
   }
 }
 
