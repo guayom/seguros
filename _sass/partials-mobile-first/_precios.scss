@@ -1,7 +1,3 @@
-.precios{
-  padding: 20px 0;
-}
-
 .coberturas-precios{
   p{
     font-size: 3em;
@@ -10,6 +6,9 @@
     margin: 0;
     line-height: 1em;
     text-align: center;
+    @media (min-width: $md){
+      text-align: left;
+    }
   }
   small, .small{
     font-size: 1.05em;
@@ -18,7 +17,7 @@
 }
 .cobertura-por{
   color: $gris-oscuro;
-  font-size: 2.5em;
+  font-size: 2.3em;
   font-weight: bold;
   small{
     font-size: 0.5em;
