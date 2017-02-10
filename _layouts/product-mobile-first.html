@@ -1,49 +1,61 @@
 ---
 layout: default
 ---
-<div class:"main-container">
-
-        <div class="hero-cob-a">
-          <img src="/images/cr-hero-seguros-cob-a.jpg" alt="BAC Credomatic"/>
-        </div>
-
-      <div class="tab-navigation">
-        <div class="tab-cob-a">Cobertura A</div>
-        <div class="tab-cob-b">Cobertura B</div>
-        <div class="tab-cob-c">Cobertura C</div>
+<div class="hero-mobile-first hero-cobertura-a">
+  <h1>Seguro<br/>Viajero</h1>
+</div>
+<div class="container-fluid">
+  <div class="row tab-navigation">
+    <div class="col-xs-4 tab-cobertura-a">Cobertura A</div>
+    <div class="col-xs-4 tab-cobertura-b">Cobertura B</div>
+    <div class="col-xs-4 tab-cobertura-c">Cobertura C</div>
+  </div>
+</div>
+<div class="container precios">
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="coberturas-precios">
+        <p>$39.6</p>
+        <p class="small"><small>Viaje de 5 días</small></p>
       </div>
-
+    </div>
+    <div class="col-xs-6">
       <div class"coberturas-precios">
-        <div class="precio-a">$39.6</div>
-        <div class="cobertura-por-a">Cobertura por $50.000</div>
-        <div class="boton-a">Asegurarme</div>
+        <p class="cobertura-por"><small>Cobertura por</small>$50.000</p>
       </div>
-
-
-      <div class="table-coberturas"
-          {% include header.html %}
-          <table class="table table-bordered">
-            {% for item in page.cobertura_items %}
-              <thead>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+      <a class="main-button" href="#">Asegurarme ahora</a>
+    </div>
+  </div>
+  <div>
+    <div class="col-xs-12">
+      <div class="table-coberturas">
+        <table class="table table-bordered">
+          {% for item in page.cobertura_items %}
+            <thead>
+              <tr>
+                <th>{{item.categoria}}</th>
+                <th>Cobertura A</th>
+                <th>Cobertura B</th>
+                <th>Cobertura C</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for sub_item in item.items %}
                 <tr>
-                  <th>{{item.categoria}}</th>
-                  <th>Cobertura A</th>
-                  <th>Cobertura B</th>
-                  <th>Cobertura C</th>
+                  <td>{{sub_item.title}}</td>
+                  <td>{{sub_item.valor_a}}</td>
+                  <td>{{sub_item.valor_b}}</td>
+                  <td>{{sub_item.valor_c}}</td>
                 </tr>
-              </thead>
-              <tbody>
-                {% for sub_item in item.items %}
-                  <tr>
-                    <td>{{sub_item.title}}</td>
-                    <td>{{sub_item.valor_a}}</td>
-                    <td>{{sub_item.valor_b}}</td>
-                    <td>{{sub_item.valor_c}}</td>
-                  </tr>
-                {% endfor %}
-              </tbody>
-            {% endfor %}
-          </table>
+              {% endfor %}
+            </tbody>
+          {% endfor %}
+        </table>
       </div>
-
+    </div>
+  </div>
 </div>

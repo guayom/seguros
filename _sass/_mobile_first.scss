@@ -1,0 +1,94 @@
+body{
+  height: 100%;
+}
+.main-container{
+
+}
+.hero-mobile-first{
+  background-size: auto 100%;
+  background-position: bottom center;
+  padding: 20px;
+  box-sizing: border-box;
+  h1{
+    color: $gris-oscuro;
+    font-weight: bold;
+  }
+}
+.hero-cobertura-a{
+  background-image: url(../images/cr-hero-seguros-cob-a.jpg);
+}
+.precios{
+  padding: 20px 0;
+}
+
+.coberturas-precios{
+  p{
+    font-size: 3em;
+    color: $turquesa;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1em;
+    text-align: center;
+  }
+  small, .small{
+    font-size: 1.05em;
+    line-height: 30px;
+  }
+}
+.cobertura-por{
+  color: $gris-oscuro;
+  font-size: 2.5em;
+  font-weight: bold;
+  small{
+    font-size: 0.5em;
+    display: block;
+    font-weight: normal;
+  }
+}
+.main-button{
+  display: block;
+  background: $rojo;
+  padding: 10px 20px;
+  color: #fff;
+  text-align: left;
+  position: relative;
+  margin-bottom: 20px;
+  &:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #ffffff;
+    margin-top: -10px;
+  }
+  &:hover{
+    background: darken($rojo, 10%);
+    color: #fff;
+    text-decoration: none;
+  }
+}
+.tab-navigation{
+  div{
+    color: #fff;
+    padding: 12px 0;
+    text-align: center;
+  }
+}
+.tab-cobertura-a{
+  background: $turquesa;
+}
+.tab-cobertura-b{
+  background: $celeste;
+}
+.tab-cobertura-c{
+  background: $azul;
+}
+.table-coberturas{
+  table{
+    max-width: 100%;
+  }
+}
