@@ -37,7 +37,7 @@
     <div id="table-{{cobertura.letter}}" class="container precios {% if forloop.first %}active{% endif %}">
       {% include precio_cobertura.html cuota=cobertura.cuota cobertura_por=cobertura.cobertura link=cobertura.link_al_form %}
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0">
+          <div class="col-xs-12">
             <div class="table-coberturas">
               <table class="table">
                 {% for item in page.cobertura_items %}
