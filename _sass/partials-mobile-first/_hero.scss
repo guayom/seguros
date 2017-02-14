@@ -1,13 +1,35 @@
 .hero-mobile-first{
-  background-size: auto 100%;
-  background-position: bottom center;
-  padding: 20px 0;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 18px 0;
   box-sizing: border-box;
   h1{
     color: $gris-oscuro;
     font-weight: bold;
+    font-size: 2em;
+    margin-left: 10px;
+    @include mq('tablet') {
+      margin-left: 40px;
+      font-size: 3em;
+    }
   }
-}
-.hero-cobertura-a{
-  background-image: url(../images/cr-hero-seguros-cob-a.jpg);
+  &.a{
+    background-image: url(https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/Viajero-Mobile-First/cr-seguros-hero-movil-cob-a.png);
+    @include mq('tablet') {
+        background-image: url(https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/Viajero-Mobile-First/cr-seguros-hero-desktop-cob-a.png);
+    }
+  }
+  &.b{
+    background-image: url(https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/Viajero-Mobile-First/cr-seguros-hero-movil-cob-b.png);
+    @include mq('tablet') {
+        background-image: url(https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/Viajero-Mobile-First/cr-seguros-hero-desktop-cob-b.png);
+    }
+  }
+  &.c{
+    background-image: url(https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/Viajero-Mobile-First/cr-seguros-hero-movil-cob-c.png);
+    @include mq('tablet') {
+        background-image: url(https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/Viajero-Mobile-First/cr-seguros-hero-desktop-cob-c.png);
+    }
+  }
 }
