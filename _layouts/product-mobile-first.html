@@ -51,7 +51,8 @@
                     {% for sub_item in item.items %}
                       <tr>
                         <td>{{sub_item.title}}</td>
-                        <td class="cell-cobertura-{{cobertura.letter}} active">{{sub_item.valor_a}}</td>
+												{% assign valor = "valor_" | append: cobertura.letter %}
+                        <td class="cell-cobertura-{{cobertura.letter}} active">{{sub_item[valor]}}</td>
                       </tr>
                       {% endfor %}
                   </tbody>

@@ -10,19 +10,22 @@
       text-align: left;
     }
   }
+  .cobertura-por{
+    color: $gris-oscuro;
+    font-size: 2.3em;
+    font-weight: bold;
+    @media (max-width: 420px){
+      font-size: 2em;
+    }
+    small{
+      font-size: 0.5em;
+      display: block;
+      font-weight: normal;
+    }
+  }
   small, .small{
     font-size: 1.05em;
     line-height: 30px;
-  }
-}
-.cobertura-por{
-  color: $gris-oscuro;
-  font-size: 2.3em;
-  font-weight: bold;
-  small{
-    font-size: 0.5em;
-    display: block;
-    font-weight: normal;
   }
 }
 .main-button{
