@@ -26,15 +26,9 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="row tab-navigation">
-      <div class="col-xs-4 tab-cobertura-a active">Cobertura A</div>
-      <div class="col-xs-4 tab-cobertura-b">Cobertura B</div>
-      <div class="col-xs-4 tab-cobertura-c">Cobertura C</div>
-    </div>
-  </div>
+  {% include tabnavigation.html %}
   {% for cobertura in page.coberturas %}
-    <div class="container precios">
+    <div id="table-{{cobertura.letter}}" class="container precios {% if forloop.first %}active{% endif %}">
       {% include precio_cobertura.html cuota=cobertura.cuota cobertura_por=cobertura.cobertura %}
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 col-md-12 col-md-offset-0">

@@ -1,38 +1,68 @@
 .tab-navigation{
   margin-bottom: 25px;
-  div{
+  a{
     color: #fff;
-    padding: 12px 0;
     text-align: center;
     position: relative;
-  }
-  div.active:after{
-    position: absolute;
-    content: "";
-    top: 98%;
-    left: 20px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 15px 15px 0px 15px;
-    border-color: #f00 transparent transparent transparent;
-  }
-  .tab-cobertura-a.active:after{
-    border-color: $turquesa transparent transparent transparent;
-  }
-  .tab-cobertura-b.active:after{
-    border-color: $celeste transparent transparent transparent;
-  }
-  .tab-cobertura-c.active:after{
-    border-color: $azul transparent transparent transparent;
-  }
-  .tab-cobertura-a{
-    background: $turquesa;
-  }
-  .tab-cobertura-b{
-    background: $celeste;
-  }
-  .tab-cobertura-c{
-    background: $azul;
+    width: 33.3333%;
+    float: left;
+    display: block;
+    padding: 12px 0;
+    background: #ddd;
+    &.active:after{
+      position: absolute;
+      content: "";
+      top: 98%;
+      left: 20px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 15px 0px 15px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
+    &.tab-cobertura-a{
+      &.active{
+        background: $turquesa;
+      }
+      &.active:after{
+        border-color: $turquesa transparent transparent transparent;
+      }
+      &:hover{
+        background: darken($turquesa, 10%);
+      }
+      &.active:hover:after{
+        border-color: darken($turquesa, 10%) transparent transparent transparent;
+      }
+    }
+    &.tab-cobertura-b{
+      &.active{
+        background: $celeste;
+      }
+      &.active:after{
+        border-color: $celeste transparent transparent transparent;
+      }
+      &:hover{
+        background: darken($celeste, 10%);
+      }
+      &.active:hover:after{
+        border-color: darken($celeste, 10%) transparent transparent transparent;
+      }
+    }
+    &.tab-cobertura-c{
+      &.active{
+        background: $azul;
+      }
+      &.active:after{
+        border-color: $azul transparent transparent transparent;
+      }
+      &:hover{
+        background: darken($azul, 10%);
+      }
+      &.active:hover:after{
+        border-color: darken($azul, 10%) transparent transparent transparent;
+      }
+    }
   }
 }
