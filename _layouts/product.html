@@ -2,18 +2,49 @@
 layout: default
 ---
 {% include header.html %}
-<div class="container" id="product-background">
+<div class="container container-fluid-mobile">
   <div class="row">
     <div class="header-image" style="background-image: url({{page.header_image}});">
     </div>
   </div>
+
   <div class="row">
-    <div class="product-container col-xs-12">
+    <div class="product-container">
       <h1>
         <small>{{page.title_small}}</small><br/>
         {{page.title}}
       </h1>
-      <table id="coberturas" class="tablesaw" data-tablesaw-mode="swipe" data-minimap>
+
+      <table id="coberturas">
+        <tr class="cobertura_titles">
+          {% for cobertura in page.coberturas %}
+            <th scope="col" width="33.333%" class="coberturas-titulos">{{cobertura.title}}</th>
+          {% endfor %}
+        </tr>
+        <tr class="precios">
+          {% for cobertura in page.coberturas %}
+            <td data-cobertura="{{forloop.index}}">
+              Cobertura por:
+              <span class="cobertura_monto">{{page.moneda}}{{cobertura.cobertura}}</span>
+              {% if page.palabra %}{{page.palabra}}{% else %}Desde{%endif%} <strong>{{page.moneda}}{{cobertura.cuota}}</strong> por {{cobertura.periodo}} {{page.periodo}}
+
+              <a href="javascript:void(0)">Ver más +</a>
+            </td>
+          {% endfor %}
+        </tr>
+        <tr class="botones">
+          {% for cobertura in page.coberturas %}
+            <td>
+              <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-primary">
+                Asegurarme
+              </a>
+            </td>
+          {% endfor %}
+        </tr>
+      </table>
+
+
+      <table width="100%">
       <!-- <table id="coberturas"> -->
         <thead>
           <tr class="cobertura_titles">

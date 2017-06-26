@@ -1,3 +1,12 @@
+.btn-primary {
+  background: $rojo;
+  border-color: $rojo;
+
+  &:hover {
+    background: darken($rojo, 10%);
+    border-color: darken($rojo, 10%);
+  }
+}
 .product-container{
   h1, h1 small{
     color: $azul;
@@ -7,65 +16,74 @@
     margin-bottom: 80px;
     font-size: 36px;
     text-align: center;
+    display: none;
   }
 }
-#product-background{
-  background-repeat: no-repeat;
-  background-size: 100%;
-  padding: 10px;
 
-  @include mq("tablet") {
-    padding: 0;
-  }
-}
+
 #coberturas{
   width: 100%;
+  table-layout: fixed;
+  margin-bottom: 20px;
 
-  th, td{
-    text-align: center;
-  }
   .cobertura_titles{
     th{
       color: #fff;
       padding: 10px 0;
       font-size: 1.1em;
-    }
-    th:nth-child(2){
-      background: darken($turquesa, 10%);
-    }
-    th:nth-child(3){
-      background: darken($celeste, 10%);
-    }
-    th:nth-child(4){
-      background: darken($azul, 10%);
-    }
-  }
-  .cobertura_precios{
-    th{
-      color: #fff;
-      //padding: 20px 0;
-      font-weight: 400;
+      width: 33.3333%;
+      text-align: center;
+      font-size: 1em;
     }
     th:nth-child(1){
-      color: #fff;
-      font-size: 1.5em;
-      background: darken($azul, 10%);
+      background: darken($turquesa, 10%);
     }
     th:nth-child(2){
-      background: $turquesa;
+      background: darken($celeste, 10%);
     }
     th:nth-child(3){
+      background: darken($azul, 10%);
+    }
+  }
+
+  .precios {
+    position: relative;
+
+    td {
+      padding: 15px;
+      color: #fff;
+    }
+
+    td:nth-child(1){
+      background: $turquesa;
+    }
+    td:nth-child(2){
       background: $celeste;
     }
-    th:nth-child(4){
+    td:nth-child(3){
       background: $azul;
     }
+
+    span {
+      clear: both;
+      display: block;
+      font-weight: 700;
+      font-size: 1.6em;
+    }
+
+    a {
+      display: block;
+      text-align: right;
+      margin-top: 20px;
+      color: #fff;
+
+      &:hover {
+        color: lighten($celeste, 10%);
+      }
+    }
+
   }
-  .cobertura_monto{
-    clear: both;
-    display: block;
-    font-weight: 700;
-  }
+
   .categoria_items{
     td:nth-child(1){
       color: $gris-oscuro;
@@ -83,37 +101,30 @@
       background: $gris-claro;
     }
   }
-  .product_botones{
-    border-top: 1px solid $gris-oscuro;
-    td:nth-child(1){
-      font-size: 1.5em;
-      color: $gris-oscuro;
-      strong{
-        color: $azul;
-      }
-    }
-    td{
-      padding: 20px 0;
-    }
-    .btn-danger{
-      background: $rojo;
-      font-size: 1.2em;
-      &:hover{
-        background: darken($rojo, 10%);
-      }
-    }
+}
+
+.botones {
+  text-align: center;
+
+  td {
+    padding: 15px;
   }
-  tbody{
-    background-color: #fff;
-    td{
-      padding: 15px 0;
-      color: $gris-oscuro;
-    }
-    tr.categoria_items:hover{
-      td, td:nth-child(2), td:nth-child(4){
-        background: darken($gris-claro, 5%);
-        cursor: default;
-      }
+
+  td:nth-child(1){
+    background: lighten($turquesa, 10%);
+  }
+  td:nth-child(2){
+    background: lighten($celeste, 10%);
+  }
+  td:nth-child(3){
+    background: lighten($azul, 10%);
+  }
+
+  .btn {
+    box-shadow: 0px 1px 13px -2px rgba(0,0,0,0.75);
+
+    &:hover {
+      box-shadow: 0px 1px 19px -2px rgba(0,0,0,0.75);
     }
   }
 }
@@ -133,38 +144,6 @@
   background: url(../images/header.png) no-repeat right top;
 }
 
-.precios-header{
-  position: relative;
-
-  a{
-    color: #fff;
-    display: block;
-    padding: 20px 0;
-
-    &:hover{
-      color: #fff;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    &:hover > .cobertura_monto{
-      text-decoration: underline;
-    }
-  }
-
-  &:hover:afterz{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: red;
-    display: block;
-    border: solid green 5px;
-  }
-
-  .hover-btn{
-    position: absolute;
-    display: none;
-  }
-}
 .dropdown-menu{
     background: $gris-oscuro;
 }

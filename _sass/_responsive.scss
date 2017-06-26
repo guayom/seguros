@@ -46,21 +46,4 @@ and (max-device-width : 320px) {
   .cobertura_monto.cobertura-1{
     font-size: 1.8em;
   }
-  th{
-    min-width: 126px;
-  }
-}
-@media only screen
-and (min-device-width : 321px)
-and (max-width:768px)
-{
-  .cobertura_monto{
-    font-size: 1.6em;
-  }
-  .cobertura_monto.cobertura-1{
-    font-size: 2.4em;
-  }
-  th{
-    min-width: 126px;
-  }
 }
