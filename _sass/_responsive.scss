@@ -2,11 +2,14 @@
   .product-container{
     margin-bottom: 30px;
     h1{
-      margin-bottom: 20px;
+      display: none;
     }
   }
   #product-background{
-    background-image: none !important;
+    background-size: auto 110px;
+    &.container {
+      padding: 0;
+    }
   }
   .responsive-plans{
     h2{

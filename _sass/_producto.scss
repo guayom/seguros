@@ -13,6 +13,10 @@
   background-repeat: no-repeat;
   background-size: 100%;
   padding: 10px;
+
+  @include mq("tablet") {
+    padding: 0;
+  }
 }
 #coberturas{
   width: 100%;
@@ -195,4 +199,15 @@
 }
 .tablesaw-swipe .tablesaw-cell-persist{
   border: none;
+}
+
+.header-image {
+  background-repeat: no-repeat;
+  background-size: 180% auto;
+  padding-bottom: 27%;
+
+  @include mq("tablet") {
+    background-size: 100% auto;
+    padding-bottom: 15%;
+  }
 }
