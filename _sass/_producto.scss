@@ -1,3 +1,14 @@
+.header-image {
+  background-repeat: no-repeat;
+  background-size: 180% auto;
+  padding-bottom: 27%;
+
+  @include mq("tablet") {
+    background-size: 100% auto;
+    padding-bottom: 15%;
+  }
+}
+
 .btn-primary {
   background: $rojo;
   border-color: $rojo;
@@ -7,6 +18,7 @@
     border-color: darken($rojo, 10%);
   }
 }
+
 .product-container{
   h1, h1 small{
     color: $azul;
@@ -44,6 +56,9 @@
     th:nth-child(3){
       background: darken($azul, 10%);
     }
+    th.active {
+      //background: red;
+    }
   }
 
   .precios {
@@ -52,6 +67,8 @@
     td {
       padding: 15px;
       color: #fff;
+      z-index: -1000;
+      vertical-align: top;
     }
 
     td:nth-child(1){
@@ -71,7 +88,7 @@
       font-size: 1.6em;
     }
 
-    a {
+    p {
       display: block;
       text-align: right;
       margin-top: 20px;
@@ -79,6 +96,14 @@
 
       &:hover {
         color: lighten($celeste, 10%);
+      }
+    }
+
+    td.active {
+      //background: red;
+
+      p {
+        display: none;
       }
     }
 
@@ -120,6 +145,17 @@
     background: lighten($azul, 10%);
   }
 
+  //Para la flecha de abajo
+  td:nth-child(1).active:after{
+    border-top-color: lighten($turquesa, 10%);
+  }
+  td:nth-child(2).active:after{
+    border-top-color: lighten($celeste, 10%);
+  }
+  td:nth-child(3).active:after{
+    border-top-color: lighten($azul, 10%);
+  }
+
   .btn {
     box-shadow: 0px 1px 13px -2px rgba(0,0,0,0.75);
 
@@ -127,6 +163,111 @@
       box-shadow: 0px 1px 19px -2px rgba(0,0,0,0.75);
     }
   }
+
+  td.active {
+    position: relative;
+
+    &:after {
+      top: 99%;
+    	left: 50%;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    	border-color: rgba(136, 183, 213, 0);
+    	border-width: 20px;
+    	margin-left: -20px;
+      background-color: transparent;
+    }
+  }
+}
+
+.informacion {
+  padding: 15px;
+}
+
+.cobertura-contenido {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  h2 {
+    color: $gris-oscuro;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+}
+
+.show_coverage_items {
+  color: $gris-medio;
+  font-size: .8em;
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align: right;
+
+  &:visited, &:active, &:focus {
+    color: $gris-medio;
+    text-decoration: none;
+  }
+
+  &:after {
+    content: " más +";
+  }
+}
+
+.cobertura-detail-table {
+  margin-bottom: 30px;
+  color: $gris-oscuro;
+  width: 100%;
+
+  thead {
+    color: $azul;
+    text-transform: uppercase;
+    font-size: 1.1em;
+  }
+
+  th {
+    border-bottom: solid 1px $gris-medio;
+    padding-bottom: 5px;
+  }
+
+  td {
+    padding: 5px 0;
+  }
+
+  tbody {
+    display: none;
+  }
+
+  &.open {
+    tbody {
+      display: table-row-group;
+    }
+    .show_coverage_items:after {
+      content: " menos -"
+    }
+  }
+}
+
+.cobertura-inmediata {
+  color: $gris-oscuro;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.facil-y-rapido {
+  color: $rojo;
+  font-size: 2em;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
 }
 
 #product-tarjetas{
@@ -150,43 +291,4 @@
 .navbar-default .navbar-nav .dropdown-menu li a
 {
     border-right: none;
-}
-
-.responsive-plans{
-  div{
-    margin-bottom: 10px;
-  }
-  .cobertura_monto{
-    display: block;
-    font-size: 2em;
-  }
-  .precios-header{
-    text-align: center;
-    &:nth-child(2){
-      background: darken($turquesa, 10%);
-    }
-    &:nth-child(3){
-      background: darken($celeste, 10%);
-    }
-    &:nth-child(4){
-      background: darken($azul, 10%);
-    }
-  }
-  .btn{
-    font-size: 1.5em;
-  }
-}
-.tablesaw-swipe .tablesaw-cell-persist{
-  border: none;
-}
-
-.header-image {
-  background-repeat: no-repeat;
-  background-size: 180% auto;
-  padding-bottom: 27%;
-
-  @include mq("tablet") {
-    background-size: 100% auto;
-    padding-bottom: 15%;
-  }
 }
