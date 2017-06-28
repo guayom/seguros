@@ -8,15 +8,12 @@ function setActivePrice(thisObj) {
   //reset active
   $(".precios td").removeClass('active');
   $(".botones td").removeClass('active');
-  //hide all the information
-  $('.cobertura-contenido').removeClass('active');
+  $(".coberturas-table td").removeClass('visible');
 
   //select active
   $(".precios").find(`td[data-cobertura='`+cobertura+`']`).addClass('active');
   $(".botones").find(`td[data-cobertura='`+cobertura+`']`).addClass('active');
-
-  //display corresponding information
-  $(".informacion").find(`div[data-cobertura='`+cobertura+`']`).addClass('active');
+  $(".coberturas-table").find(`[data-cobertura='`+cobertura+`']`).addClass('visible');
 
 }
 
@@ -29,7 +26,7 @@ $(document).ready(function (){
   });
 
   //Mostrar u ocultar las tablas de items
-  $('.show_coverage_items').click(function(){
+  $('.coberturas-table th').click(function(){
     var targetTable = $(this).closest('table');
     targetTable.toggleClass('open');
   });
