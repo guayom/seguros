@@ -396,6 +396,55 @@
   text-align: center;
 }
 
+//Estilos de iformaión adicional
+@mixin colored-container {
+  padding: 20px;
+
+  ul {
+    padding-left: 15px;
+  }
+}
+
+.blue-container {
+  background: $azul;
+  color: #fff;
+  @include colored-container;
+}
+
+.gray-container {
+  background: $gris-claro;
+  color: $gris-oscuro;
+  @include colored-container;
+
+  h2 {
+    color: $azul;
+  }
+}
+
+.white-container {
+  background: $blanco;
+  color: $gris-oscuro;
+  @include colored-container;
+
+  h2 {
+    color: $azul;
+  }
+}
+
+.panel-group {
+
+  .panel-default {
+    border: 0;
+    border-bottom: 1px solid $gris-claro;
+  }
+
+  .panel-heading {
+    padding-left: 0;
+    padding-right: 0;
+    background: #fff;
+  }
+}
+
 //Overrides al template de Kentico
 .navbar-header, .buscador, .logoSeguros {
     display: none;
