@@ -43,6 +43,12 @@ layout: default
     </div>
   </div>
 
+  {% for cobertura in page.coberturas %}
+    <div class="cobertura-titulo-responsive {% if forloop.index  == 1 %}expanded{% endif %}" data-cobertura="{{forloop.index}}">
+        <h2><strong>{{cobertura.title}}</strong> - Cobertura por {{page.moneda}}{{cobertura.cobertura}}</h2>
+    </div>
+  {% endfor %}
+
   <div class="row no-pad">
     {% for tabla in page.cobertura_items %}
       <table class="coberturas-table {% if forloop.index  == 1 %}open{% endif %}" width="100%">

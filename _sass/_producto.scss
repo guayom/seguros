@@ -445,6 +445,23 @@
   }
 }
 
+.cobertura-titulo-responsive {
+  display: none;
+  color: $gris-oscuro;
+
+  h2 {
+    font-size: 20px;
+  }
+
+  &.expanded {
+    display: block;
+
+    @include mq("tablet") {
+      display: none;
+    }
+  }
+}
+
 //Overrides al template de Kentico
 .navbar-header, .buscador, .logoSeguros, .navbar.navbar-default, .SesionWeb, .cartWeb {
     display: none;

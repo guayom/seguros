@@ -9,11 +9,13 @@ function setActivePrice(thisObj) {
   $(".precios td").removeClass('active');
   $(".botones td").removeClass('active');
   $(".coberturas-table td").removeClass('visible');
+  $('.cobertura-titulo-responsive').removeClass('expanded');
 
   //select active
   $(".precios").find(`td[data-cobertura='`+cobertura+`']`).addClass('active');
   $(".botones").find(`td[data-cobertura='`+cobertura+`']`).addClass('active');
   $(".coberturas-table").find(`[data-cobertura='`+cobertura+`']`).addClass('visible');
+  $(`.cobertura-titulo-responsive[data-cobertura='`+cobertura+`']`).addClass('expanded');
 
 }
 
