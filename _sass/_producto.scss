@@ -429,3 +429,8 @@
     margin-top: 0 !important;
     display: inline;
 }
+
+.margenAlto .row div:first-child {
+    padding-left: 0;
+    padding-right: 0;
+}
