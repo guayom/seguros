@@ -94,42 +94,35 @@ layout: default
 </div>
 
 <div class="container" id="product-tarjetas">
-  <div class="row">
-    <div class="col-xs-12">
-      Aceptamos las tarjetas más populares <img src="https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/product-pages/tarjetas.png" width="240"/>
-    </div>
+  <div class="col-xs-12">
+    Aceptamos las tarjetas más populares <img src="https://www.credomatic.cr/BacCredomaticSeguros/BacCredomaticSeguros/media/product-pages/tarjetas.png" width="240"/>
   </div>
 </div>
 
 <div class="container gray-container" id="numero_de_producto">
-  <div class="row">
-    <div class="col-xs-12 text-center">
-      {{ page.numero_de_producto }}
-    </div>
+  <div class="col-xs-12 text-center">
+    {{ page.numero_de_producto }}
   </div>
 </div>
 
 {% if page.requisitos %}
 <div class="container blue-container" id="product-requisitos">
-  <div class="row">
-    <div class="col-lg-3">
-      <h2>Requisitos</h2>
-      <p>El solicitante debe ser: </p>
-    </div>
-    <div class="col-lg-9">
-      <ul>
-        {% for requisito in page.requisitos %}
-          <li>{{requisito}}</li>
-        {% endfor %}
-      </ul>
-    </div>
+  <div class="col-lg-3">
+    <h2>Requisitos</h2>
+    <p>El solicitante debe ser: </p>
+  </div>
+  <div class="col-lg-9">
+    <ul>
+      {% for requisito in page.requisitos %}
+        <li>{{requisito}}</li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 {% endif %}
 
 {% if page.faq %}
 <div class="container white-container" id="product-faq">
-  <div class="row">
     <div class="col-lg-3">
       <h2>Preguntas Frecuentes</h2>
       <p> Haga click en las preguntas para ver sus respuestas</p>
@@ -152,41 +145,36 @@ layout: default
         </div>
         {% endfor %}
     </div>
-    </div>
   </div>
 </div>
 {% endif %}
 
 {% if page.reclamos %}
 <div class="container gray-container" id="product-reclamos">
-  <div class="row">
-    <div class="col-lg-3">
-      <h2>Reclamos</h2>
-    </div>
-    <div class="col-lg-9">
-      <ul>
-        {% for reclamo in page.reclamos %}
-          <li>{{reclamo}}</li>
-        {% endfor %}
-      </ul>
-    </div>
+  <div class="col-lg-3">
+    <h2>Reclamos</h2>
+  </div>
+  <div class="col-lg-9">
+    <ul>
+      {% for reclamo in page.reclamos %}
+        <li>{{reclamo}}</li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 {% endif %}
 
 {% if page.exclusiones %}
 <div class="container white-container" id="product-exclusiones">
-  <div class="row">
-    <div class="col-lg-3">
-      <h2>Exclusiones</h2>
-    </div>
-    <div class="col-lg-9">
-      <ul>
-        {% for exclusion in page.exclusiones %}
-          <li>{{exclusion}}</li>
-        {% endfor %}
-      </ul>
-    </div>
+  <div class="col-lg-3">
+    <h2>Exclusiones</h2>
+  </div>
+  <div class="col-lg-9">
+    <ul>
+      {% for exclusion in page.exclusiones %}
+        <li>{{exclusion}}</li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 {% endif %}
