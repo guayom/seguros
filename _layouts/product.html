@@ -80,7 +80,7 @@ layout: default
             ¡Obtenga su cobertura INMEDIATA!</br/>
             <span>Es FÁCIL y RÁPIDO</span>
           </td>
-          {% for tabla in page.cobertura_items %}
+          {% for cobertura in page.coberturas %}
             <td data-cobertura="{{forloop.index}}" {% if forloop.index == 1 %}class="visible"{% endif %}>
               <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-danger">
                 Asegurarme
