@@ -33,7 +33,7 @@ layout: default
         <tr class="botones">
           {% for cobertura in page.coberturas %}
             <td data-cobertura="{{forloop.index}}" {% if forloop.index  == 1 %}class="active"{% endif %}>
-              <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-primary">
+              <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-primary" onclick="ga('send', 'event', 'Viajero', 'Asegurarme', 'Top');">
                 Asegurarme
               </a>
             </td>
@@ -82,7 +82,7 @@ layout: default
           </td>
           {% for cobertura in page.coberturas %}
             <td data-cobertura="{{forloop.index}}" {% if forloop.index == 1 %}class="visible"{% endif %}>
-              <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-danger">
+              <a href="{{page.form_root}}{{cobertura.link_al_form}}" class="btn btn-danger" onclick="ga('send', 'event', 'Viajero', 'Asegurarme', 'Bottom');">
                 Asegurarme
               </a>
             </td>

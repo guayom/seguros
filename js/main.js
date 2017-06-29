@@ -36,13 +36,15 @@ $(document).ready(function (){
   $('.coberturas-table th').click(function(){
     var targetTable = $(this).closest('table');
     targetTable.toggleClass('open');
+    ga('send', 'event', 'Viajero', 'Más información', 'Tablas');
   });
 
   //scroll a las coberturas
   $('#coberturas tr td, #coberturas tr th').click(function (){
-    console.log('okokoko');
     $('html,body').animate({
         scrollTop: $("#coberturas").offset().top},
         'slow');
+
+    ga('send', 'event', 'Viajero', 'Más información', 'Top');
   });
 });
