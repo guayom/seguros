@@ -17,6 +17,13 @@ function setActivePrice(thisObj) {
 
 }
 
+$("#sidebar > ul > li > a").click(function(e) {
+    // Prevent a page reload when a link is pressed
+  e.preventDefault();
+    // Call the scroll function
+  goToByScroll(this.id);
+});
+
 $(document).ready(function (){
   $('.precios td').click(function(){
     setActivePrice($(this));
@@ -29,5 +36,13 @@ $(document).ready(function (){
   $('.coberturas-table th').click(function(){
     var targetTable = $(this).closest('table');
     targetTable.toggleClass('open');
+  });
+
+  //scroll a las coberturas
+  $('#coberturas tr td, #coberturas tr th').click(function (){
+    console.log('okokoko');
+    $('html,body').animate({
+        scrollTop: $("#coberturas").offset().top},
+        'slow');
   });
 });
