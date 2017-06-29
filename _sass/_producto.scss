@@ -335,6 +335,12 @@
         display: table-cell;
       }
     }
+
+    &:hover {
+       & > td {
+         background-color: darken($gris-claro, 5%);
+       }
+    }
   }
 
   td[data-cobertura='1'] {
