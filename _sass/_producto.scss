@@ -396,17 +396,36 @@
   text-align: center;
 }
 
-//Mio
-.row.logos{
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background: url(../images/header.png) no-repeat right top;
+//Overrides al template de Kentico
+.navbar-header, .buscador, .logoSeguros {
+    display: none;
 }
 
-.dropdown-menu{
-    background: $gris-oscuro;
+.row.logos {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-.navbar-default .navbar-nav .dropdown-menu li a
-{
-    border-right: none;
+
+.row.logos .img-responsive {
+  display: inline;
+}
+
+.row.logos a {
+  display: block;
+  text-align: center;
+}
+
+.logos .hidden-smcol-xs-12{
+    width: 100%;
+    text-align: center;
+}
+
+.logos .hidden-smcol-xs-12 a {
+    display: inline-block;
+}
+
+.logos .hidden-smcol-xs-12 a img {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    display: inline;
 }
