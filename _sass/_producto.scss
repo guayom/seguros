@@ -462,6 +462,17 @@
   }
 }
 
+.logos-de-tarjetas {
+  vertical-align: middle;
+  display: block;
+  margin: 0 auto;
+
+  @include mq("tablet") {
+    display: inline;
+    margin: 0 ;
+  }
+}
+
 //Overrides al template de Kentico
 .navbar-header, .buscador, .logoSeguros, .navbar.navbar-default, .SesionWeb, .cartWeb {
     display: none;
