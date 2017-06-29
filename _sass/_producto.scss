@@ -437,6 +437,39 @@
   }
 }
 
+.collapsed-container {
+  position: relative;
+  cursor: pointer;
+
+  .col-lg-3 {
+    width: 100%;
+    cursor: pointer;
+    p {
+      display: none;
+    }
+  }
+
+  .col-lg-9 {
+    display: none;
+  }
+
+  &:after{
+    display: table-cell;
+    content: "Ver más";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    line-height: 60px;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  &:hover:after {
+    text-decoration: underline;
+  }
+}
+
 .panel-group {
 
   .panel-default {

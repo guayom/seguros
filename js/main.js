@@ -49,4 +49,8 @@ $(document).ready(function (){
 
     ga('send', 'event', 'Viajero', 'Más información', 'Top');
   });
+
+  $('.collapsed-container').click(function(){
+    $(this).removeClass('collapsed-container');
+  });
 });
