@@ -18,6 +18,11 @@
 .btn-primary {
   background: $rojo;
   border-color: $rojo;
+  font-size: .8em;
+
+  @include mq("phone") {
+    font-size: 1em;
+  }
 
   &:hover {
     background: darken($rojo, 10%);
@@ -79,6 +84,11 @@
       z-index: -1000;
       vertical-align: top;
       height: 110px;
+      font-size: .8em;
+
+      @include mq("phone") {
+        font-size: 1em;
+      }
 
       @include mq("tablet") {
         text-align: center;
@@ -132,7 +142,11 @@
   text-align: center;
 
   td {
-    padding: 15px;
+    padding: 8px;
+
+    @include mq("phone") {
+      padding: 15px;
+    }
   }
 
   td:nth-child(1){
